@@ -5,13 +5,13 @@
 class Autoheal < Formula
   desc "Autoheal platform CLI — investigations, chat, and the whole API"
   homepage "https://autoheal.ai"
-  version "0.6.0"
+  version "0.7.0"
   license "Proprietary"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/accelos/autoheal-cli/releases/download/v0.6.0/autoheal_0.6.0_darwin_amd64.tar.gz"
-      sha256 "ed2fc31ad4395804e476aec30547e73bae8061b704ebf4ce56db56a5bc3cf661"
+      url "https://github.com/accelos/autoheal-cli/releases/download/v0.7.0/autoheal_0.7.0_darwin_amd64.tar.gz"
+      sha256 "dbac35074116cb283d771718fbf3bdc3cdc7dd20a39f53d02737ca13ab0b0120"
 
       define_method(:install) do
         bin.install "autoheal"
@@ -19,8 +19,8 @@ class Autoheal < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/accelos/autoheal-cli/releases/download/v0.6.0/autoheal_0.6.0_darwin_arm64.tar.gz"
-      sha256 "1cc70015d9fa04f9d7d01bdc521aa0ec67837450ad27fcab977885f50344aa8b"
+      url "https://github.com/accelos/autoheal-cli/releases/download/v0.7.0/autoheal_0.7.0_darwin_arm64.tar.gz"
+      sha256 "205eb31c963b8e8d90f99bf05be707e6b7931bd3e3a5d922511fccd9e7f94d5e"
 
       define_method(:install) do
         bin.install "autoheal"
@@ -31,16 +31,16 @@ class Autoheal < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/accelos/autoheal-cli/releases/download/v0.6.0/autoheal_0.6.0_linux_amd64.tar.gz"
-      sha256 "fd82ed4530ec815553fad018cbf8fce379c285b2b7472db20bfa52c981663468"
+      url "https://github.com/accelos/autoheal-cli/releases/download/v0.7.0/autoheal_0.7.0_linux_amd64.tar.gz"
+      sha256 "5b90a244c2ab79962a0bb8c843608c4b7b467eea2e149dda05b2789fd62f70c9"
       define_method(:install) do
         bin.install "autoheal"
         bin.install_symlink "autoheal" => "ah"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/accelos/autoheal-cli/releases/download/v0.6.0/autoheal_0.6.0_linux_arm64.tar.gz"
-      sha256 "96877c85869182ab180a1827fe24893296b45b3ef6da6298a1d8ef00670975cc"
+      url "https://github.com/accelos/autoheal-cli/releases/download/v0.7.0/autoheal_0.7.0_linux_arm64.tar.gz"
+      sha256 "51fc2bed3caa3a13086ba1ec0485fbb82d582b2b4e45b940971d17e7a7bf79e0"
       define_method(:install) do
         bin.install "autoheal"
         bin.install_symlink "autoheal" => "ah"
